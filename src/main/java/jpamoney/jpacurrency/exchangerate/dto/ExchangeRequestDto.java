@@ -18,4 +18,7 @@ public class ExchangeRequestDto {
     @Size(min = 4, max = 4)
     @NotBlank
     String data; // 검색요청API타입 : AP01 : 환율, AP02 : 대출금리, AP03 : 국제금리
+
+    @Schema(title = "조회할 통화", example = "USD")
+    String curType;
 }
