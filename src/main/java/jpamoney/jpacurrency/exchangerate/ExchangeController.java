@@ -1,6 +1,7 @@
 package jpamoney.jpacurrency.exchangerate;
 
 
+import io.swagger.v3.oas.annotations.Operation;
 import jpamoney.jpacurrency.exchangerate.dto.ExchangeRateDto;
 import jpamoney.jpacurrency.exchangerate.dto.ExchangeRequestDto;
 import jpamoney.jpacurrency.exchangerate.service.ExchangeService;
@@ -28,6 +29,9 @@ public class ExchangeController {
      * @return
      * @throws Exception
      */
+    @Operation(
+            summary = "통화 조회", description = "원하는 통화의 환율을 조회"
+    )
     @GetMapping("/rate")
     public ExchangeRateDto getExchangeRate(@Valid @RequestBody ExchangeRequestDto dto, Errors errors) throws Exception{
 
