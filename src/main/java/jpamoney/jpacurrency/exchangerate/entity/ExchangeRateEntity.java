@@ -15,40 +15,57 @@ public class ExchangeRateEntity {
     @GeneratedValue
     private Long id;
 
-    private String cur_unit;
+    private String curUnit;
 
-    private String cur_nm;
+    private String curNm;
 
     private String ttb;
 
     private String tts;
 
-    private String deal_bas_r;
+    private String dealBasR;
 
     private String bkpr;
 
-    private String yy_efee_r;
+    private String yyEfeeR;
 
-    private String ten_dd_efee_r;
+    private String tenDdEfeeR;
 
-    private String kftc_deal_bas_r;
+    private String kftcDealBasR;
 
-    private String kftc_bkpr;
+    private String kftcBkpr;
 
     public ExchangeRateEntity() {
     }
 
     @Builder
-    public ExchangeRateEntity(String cur_unit, String cur_nm, String ttb, String tts, String deal_bas_r, String bkpr, String yy_efee_r, String ten_dd_efee_r, String kftc_deal_bas_r, String kftc_bkpr) {
-        this.cur_unit = cur_unit;
-        this.cur_nm = cur_nm;
+    public ExchangeRateEntity(String curUnit, String curNm, String ttb, String tts, String dealBasR, String bkpr, String yyEfeeR, String tenDdEfeeR, String kftcDealBasR, String kftcBkpr) {
+        this.curUnit = curUnit;
+        this.curNm = curNm;
         this.ttb = ttb;
         this.tts = tts;
-        this.deal_bas_r = deal_bas_r;
+        this.dealBasR = dealBasR;
         this.bkpr = bkpr;
-        this.yy_efee_r = yy_efee_r;
-        this.ten_dd_efee_r = ten_dd_efee_r;
-        this.kftc_deal_bas_r = kftc_deal_bas_r;
-        this.kftc_bkpr = kftc_bkpr;
+        this.yyEfeeR = yyEfeeR;
+        this.tenDdEfeeR = tenDdEfeeR;
+        this.kftcDealBasR = kftcDealBasR;
+        this.kftcBkpr = kftcBkpr;
+    }
+
+    @Override
+    public String toString() {
+        return "ExchangeRateEntity{" +
+                "id=" + id +
+                ", curUnit='" + curUnit + '\'' +
+                ", curNm='" + curNm + '\'' +
+                ", ttb='" + ttb + '\'' +
+                ", tts='" + tts + '\'' +
+                ", dealBasR='" + dealBasR + '\'' +
+                ", bkpr='" + bkpr + '\'' +
+                ", yyEfeeR='" + yyEfeeR + '\'' +
+                ", tenDdEfeeR='" + tenDdEfeeR + '\'' +
+                ", kftcDealBasR='" + kftcDealBasR + '\'' +
+                ", kftcBkpr='" + kftcBkpr + '\'' +
+                '}';
     }
 }
